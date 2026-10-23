@@ -1,4 +1,5 @@
-# DCF-Valuation-Marico-Bangladesh-limited
+**Financial Modeling Project — Marico Bangladesh Limited**
+
 # Marico Bangladesh Ltd. — Discounted Cash Flow (DCF) Valuation Model
 
 A financial modeling project using the **Discounted Cash Flow (DCF) method** to estimate the intrinsic value of Marico Bangladesh Limited based on historical financial statements, projected unlevered free cash flows, and the Weighted Average Cost of Capital (WACC).
@@ -67,44 +68,37 @@ The model includes explicit revenue growth assumptions and forecasts for operati
 
 Revenue is forecast using:
 
-\[
-Revenue_t=Revenue_{t-1}(1+g_t)
-\]
+Revenue_t = Revenue_{t-1}(1 + g_t)
 
 Where:
-- \(Revenue_t\) = revenue in the forecast year
-- \(g_t\) = assumed annual revenue growth rate
+ Revenue = revenue in the forecast year
+ g = assumed annual revenue growth rate
 
 ### 3. Unlevered Free Cash Flow (UFCF)
 
 The model estimates the cash flow available to all capital providers before financing payments.
 
-\[
-UFCF=EBIT(1-T)+D\&A-CapEx-\Delta NWC
-\]
+UFCF = EBIT(1 - T) + D\&A - CapEx - \Delta NWC
 
 Where:
-- \(EBIT\) = earnings before interest and taxes
-- \(T\) = applicable operating tax rate
-- \(D\&A\) = depreciation and amortization
-- \(CapEx\) = capital expenditure
-- \(\Delta NWC\) = change in net operating working capital
-
+-EBIT
+-T
+-D&A
+-CapEx
+-DeltaNWC
 ### 4. Weighted Average Cost of Capital (WACC)
 
 WACC represents the discount rate used to calculate the present value of projected unlevered free cash flows.
 
-\[
-WACC=\frac{E}{V}R_e+\frac{D}{V}R_d(1-T)
-\]
+WACC = \frac{E}{V}R_e + \frac{D}{V}R_d(1 - T)
 
 Where:
-- \(E\) = market value of equity
-- \(D\) = market value of interest-bearing debt
-- \(V=E+D\)
-- \(R_e\) = cost of equity
-- \(R_d\) = pre-tax cost of debt
-- \(T\) = applicable tax rate
+- (E) = market value of equity
+- (D) = market value of interest-bearing debt
+- (V=E+D)
+- (R_e) = cost of equity
+- (R_d) = pre-tax cost of debt
+- (T) = applicable tax rate
 
 The workbook includes assumptions for the risk-free rate, equity market risk premium, beta, cost of debt, and capital structure.
 
@@ -112,14 +106,12 @@ The workbook includes assumptions for the risk-free rate, equity market risk pre
 
 Terminal value estimates the value of cash flows beyond the explicit forecast period using the perpetual growth method.
 
-\[
-TV_n=\frac{UFCF_{n+1}}{WACC-g}
-\]
+TV_n = \frac{UFCF_{n+1}}{WACC - g}
 
 Where:
-- \(TV_n\) = terminal value at the end of the forecast period
-- \(UFCF_{n+1}\) = free cash flow in the first year after the forecast period
-- \(g\) = perpetual growth rate
+- (TV_n) = terminal value at the end of the forecast period
+- (UFCF_{n+1}) = free cash flow in the first year after the forecast period
+- (g) = perpetual growth rate
 
 The calculation requires \(WACC>g\).
 
@@ -127,22 +119,16 @@ The calculation requires \(WACC>g\).
 
 Enterprise value is estimated by adding the present value of forecast free cash flows to the present value of terminal value.
 
-\[
-EV=PV(\text{Forecast UFCF})+PV(TV)
-\]
+EV = PV(\text{Forecast UFCF}) + PV(TV)
 
 Equity value is then derived by adjusting enterprise value for cash, debt, and minority interests:
 
-\[
-Equity\ Value=EV+Cash-Debt-Minority\ Interest
-\]
+
+\text{Equity Value} = EV + \text{Cash} - \text{Debt} - \text{Minority Interest}
 
 Finally, the implied share price is calculated as:
 
-\[
-\text{Implied Share Price}
-=\frac{\text{Equity Value}}{\text{Diluted Shares Outstanding}}
-\]
+\text{Implied Share Price} = \frac{\text{Equity Value}}{\text{Diluted Shares Outstanding}}
 
 The valuation model uses diluted shares outstanding expressed in millions.
 
